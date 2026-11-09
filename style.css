@@ -12,12 +12,12 @@ body
     margin-bottom: 5px;
     border-radius: 10px;
 }
-.CradGrid
+.CardGrid
 {
     margin-top: 20px;
     height: 60rem;
 }
-.CradGrid .card
+.CardGrid .card
 {
     border-radius: 10px;
 }
