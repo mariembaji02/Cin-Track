@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CinéTrack</title>
+    <link rel="icon"  type="image/icon"  href="images/movie-icon.svg">
+        <!-- link of tailwind css -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- link of style sheet -->
+       <link rel="stylesheet" href="style.css">
+        <!-- font awsome link -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+      
 </head>
-<body>
-        
+<body class="min-h-screen bg-linear-to-l from-[#100f0ff7]  to-[#854b85d3] grid grid-cols-[1fr_3fr]">
+                    <aside class="nav m-6 w-[100%]  ">
+                        <nav class="h-[80%] w-[100%] ml-8">
+                        <header class="bg-white flex items-center gap-2 p-5 rounded-lg"> <img src="images/movie-icon.svg" alt="icon" class="w-15 h-15"> <h1 class="text-2xl font-bold"> Ciné<span class="text-pink-700">Track</span></h1></header>
+
+                        <ul class="FavorMovie bg-white mt-5 rounded-lg h-[100%] p-5">
+                            <p class="text-xl font-semibold mb-5 ml-3"><i class="fa-regular fa-heart"></i> Favorite</p>
+                            <li><p class="flex gap-3 items-center"> <img src="images/IMG.jpg" alt="big Picture" class="w-10 h-10 rounded"><span>this is yhe movie part</span></p> <i class="fa-solid fa-x"></i></li>
+                            <li><p class="flex gap-3 items-center"> <img src="images/IMG.jpg" alt="big Picture" class="w-10 h-10 rounded"><span>this is yhe movie part</span></p> <i class="fa-solid fa-x"></i></li>
+                            <li><p class="flex gap-3 items-center"> <img src="images/IMG.jpg" alt="big Picture" class="w-10 h-10 rounded"><span>this is yhe movie part</span></p> <i class="fa-solid fa-x"></i></li>
+                            <li><p class="flex gap-3 items-center"> <img src="images/IMG.jpg" alt="big Picture" class="w-10 h-10 rounded"><span>this is yhe movie part</span></p> <i class="fa-solid fa-x"></i></li>
+                            <li><p class="flex gap-3 items-center"> <img src="images/IMG.jpg" alt="big Picture" class="w-10 h-10 rounded"><span>this is yhe movie part</span></p> <i class="fa-solid fa-x"></i></li>
+                            <li><p class="flex gap-3 items-center"> <img src="images/IMG.jpg" alt="big Picture" class="w-10 h-10 rounded"><span>this is yhe movie part</span></p> <i class="fa-solid fa-x"></i></li>
+
+                        </ul>
+                        </nav>
+                        
+                    
+                   </aside>
+                   <main class="content   m-6 grid place-items-center  w-full">
+                        <nav class="flex justify-between   w-[90%]">
+                            <ul class=" flex gap-6 ">
+                                <li class="  bg-white px-5  flex items-center  text-lg rounded-lg">Home</li>
+                                <li class=" text-white flex items-center  text-lg rounded-lg">Serie</li>
+                                <li class=" px-5 text-white  flex items-center  text-lg rounded-lg">Film</li>
+                                
+                            </ul>
+                            <div class="search w-[40%] mt-4 flex  justify-center items-center gap-2 relative">
+                            <input type="text" placeholder="  Enter le titre ..." class="border rounded-md w-[100%] p-3  bg-white">
+                            <i class="fa-solid fa-search text-2xl text-gray-500 absolute right-6"  ></i>
+                            </div>
+                           <div class=" flex  items-center gap-10 ">
+                             <p  class="text-2xl text-white"><i class="fa-regular fa-bell"></i></p>
+                            <p class="bg-white px-4  py-3 text-center text-lg rounded-lg"><i class="fa-solid fa-user "></i><span> &nbsp;Mariem Bajbouji</span></p>
+                           </div>
+                         </nav>
+                        
+
+                        
+                         
+                         <div class="CradGrid grid grid-cols-3 gap-4 w-[90%]">
+                             </div>
+                         <div class="pagination  w-[90%] flex justify-center gap-[10%] font-semibold mt-5">
+                            <button class="rounded border p-3 px-5">&lt;</button>
+                            <button class="rounded border p-3 px-5">1</button>
+                            <button class="rounded border p-3 px-5">2</button>
+                            <button class="rounded border p-3 px-5">3</button>
+                            <button class="rounded border p-3 px-5">&gt;</button>
+                         </div>
+
+                    </main>
+
+
+
+
+    <script type="module" src="js/main.js"></script>    
 </body>
 </html>

@@ -1,0 +1,23 @@
+body
+{
+    overflow-x: hidden;
+}
+
+.FavorMovie >li{
+    border: 1px solid ;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.CradGrid
+{
+    margin-top: 20px;
+    height: 60rem;
+}
+.CradGrid .card
+{
+    border-radius: 10px;
+}
