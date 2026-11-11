@@ -5,19 +5,15 @@ body
 
 .FavorMovie >li{
     border: 1px solid ;
-    padding: 15px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
     border-radius: 10px;
 }
-.CardGrid
+
+.pagination button
 {
-    margin-top: 20px;
-    height: 60rem;
-}
-.CardGrid .card
-{
-    border-radius: 10px;
+    cursor: pointer;
 }
