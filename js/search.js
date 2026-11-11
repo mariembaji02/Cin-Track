@@ -1,6 +1,8 @@
-import {afficherData} from './ui.js';
+import {pagination} from './pagination.js';
 import {initaliser} from './api.js';
 let movies=await initaliser();
+let nbrItem=6
+let page=1
  let input=document.querySelector(".Search");
  let type=document.querySelector(".genreType")
     let typeStatut="all"
@@ -16,20 +18,32 @@ export function search(movies)
         let filter= typeStatut==="all"|| item.type===typeStatut;
          return filter && search
        })
-        
+            let message=document.querySelector(".message")
+            let gird=document.querySelector(".CardGrid");
+            let paginElement=document.querySelector(".pagination")
         if(result)
         {
-            afficherData(result)
+            gird.classList.remove("hidden")
+            paginElement.classList.remove("hidden")
+            message.classList.add("hidden")
+            pagination(result,page,nbrItem);
         }
-        else
+        if(result.length==0)
         {
-            console.log("no data found ")
+            
+            gird.classList.add("hidden")
+            paginElement.classList.add("hidden")
+            message.classList.remove("hidden")
+            message.textContent="Aucun Titre Correspand ..."
         }
        
           
 }
            
-            input.addEventListener("input",()=>{search(movies)})
+            input.addEventListener("input",()=>{
+                search(movies)
+                
+            })
             type.addEventListener("click",(e)=>{
               let btn =e.target.closest("[data-type]");
                if(!btn) return

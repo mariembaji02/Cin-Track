@@ -16,11 +16,21 @@ export function pagination(movies,Page,nbrItem)
       paginElement.innerHTML=
       `<button data- class="rounded  w-10 h-10 bg-[rgba(230,225,225,0.78)]"  id="preview">&lt;</button>
       ${paginElement.innerHTML=btnNbr.map((btn,index)=>{
-      return `<button  data-page=${index+1} class="rounded  w-10 h-10 bg-[rgba(230,225,225,0.78)]">${btn}</button>`
+      return `<button   data-page=${index+1} class="num rounded  w-10 h-10 bg-[rgba(230,225,225,0.78)]">${btn}</button>`
       }).join("")}
         
         <button class="rounded  w-10 h-10 bg-[rgba(230,225,225,0.78)]" id="after">&gt;</button>`
+        let number=document.querySelectorAll(".num")
+        number.forEach(num=>{
+          if(num.textContent.trim()==Page)
+          {
+             num.style.backgroundColor="#be185d"
+             num.style.color="white"
+        
+          }
+        })
       
+
       paginElement.addEventListener("click",(e)=>{
         let btn=e.target.closest("[data-page]")
         if(!btn) return
