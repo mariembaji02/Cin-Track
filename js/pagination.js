@@ -1,12 +1,12 @@
 // import{initaliser} from './api.js'
-import { addFavorite, listFavor,removeFavorite } from './listFavor.js'
+import { addFavorite, listFavor,Favorite } from './listFavor.js'
 import{search} from './search.js'
 import{afficherData} from './ui.js'
 // let movies=await initaliser()
-let Favorite=new Set(JSON.parse(localStorage.getItem("favorite")) || [])
 
 export function pagination(movies,Page,nbrItem)
 {
+
       let paginElement=document.querySelector(".pagination")
       let startIndex=(Page-1)*nbrItem
       let endIndex=Page*nbrItem
