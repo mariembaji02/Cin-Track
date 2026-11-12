@@ -4,7 +4,6 @@ export function addFavorite(movies)
 {
   
    
-//    Favorite= JSON.parse(localStorage.getItem("favorite"))
        let cards=document.querySelectorAll(".card")
             cards.forEach(card=>{
             let button=card.querySelector(".addFavor");
@@ -20,7 +19,6 @@ export function addFavorite(movies)
             
             Favorite.add(result)
             saveFavorite()
-            // console.log(Favorite)
             
             
            
@@ -34,7 +32,7 @@ export function addFavorite(movies)
 
  
 }
-export function saveFavorite()
+function saveFavorite()
 {
     localStorage.setItem("favorite",JSON.stringify([...Favorite]))
 }
@@ -72,7 +70,6 @@ export function removeFavorite(Favorite)
     
     
      ul.addEventListener("click",(e)=>{
-        //  e.stopPropagation()
          let li=e.target.closest("i");
          if(!li)return
          console.log(li)

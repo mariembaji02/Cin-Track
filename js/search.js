@@ -9,7 +9,6 @@ let page=1
 
 export function search(movies)
 {        
-        // console.log(input.value)
       
         let result=movies.filter(item=>{
         let search= item.title.toLowerCase().includes(input.value.toLowerCase().trim())
@@ -48,6 +47,7 @@ export function search(movies)
               let btn =e.target.closest("[data-type]");
                if(!btn) return
               typeStatut=btn.dataset.type;
+
               search(movies)
 
               })

@@ -1,8 +1,5 @@
-// import{initaliser} from './api.js'
 import { addFavorite, listFavor,Favorite } from './listFavor.js'
-import{search} from './search.js'
 import{afficherData} from './ui.js'
-// let movies=await initaliser()
 
 export function pagination(movies,Page,nbrItem)
 {
@@ -14,7 +11,6 @@ export function pagination(movies,Page,nbrItem)
       afficherData(filterTable)
       addFavorite(filterTable)
       listFavor(Favorite)
-      // listFavor()
       let nbrPage=Math.ceil(movies.length/nbrItem)
     
       let btnNbr=Array.from({length:nbrPage},(_,i)=>i+1)
@@ -53,7 +49,6 @@ export function pagination(movies,Page,nbrItem)
       let next=document.getElementById("after")
         if(Page===nbrPage)
       {
-        // console.log("true")
         next.disabled=true;
         next.style.opacity="0.5"
       }
@@ -62,7 +57,6 @@ export function pagination(movies,Page,nbrItem)
          if(Page>1)
          {
             Page--
-            // console.log(Page)
             pagination(movies,Page,nbrItem)
             
          }
@@ -71,7 +65,6 @@ export function pagination(movies,Page,nbrItem)
         if(Page<nbrPage)
          {
             Page++
-            // console.log(Page)
             pagination(movies,Page,nbrItem)
             
          }
