@@ -6,6 +6,7 @@ export function modal(movies)
     
         grid.addEventListener("click",(e)=>{
             let card = e.target.closest("[data-id]");
+            if(!card)return
              let id=card.dataset.id
 
              let result=movies.find(item=>{
@@ -13,7 +14,7 @@ export function modal(movies)
              })
              if(result)
              {
-                console.log(result)
+               //  console.log(result)
                 modal.classList.remove("hidden")
                 infos.style.backgroundImage=`url(${result.image})`
                 infos.style.backgroundSize="100% 100%"
@@ -45,4 +46,5 @@ export function modal(movies)
                 console.log("not found")
              }
         })
+        
 }

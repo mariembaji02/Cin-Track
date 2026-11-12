@@ -2,15 +2,17 @@ body
 {
     overflow-x: hidden;
 }
-
+.FavorMovie
+{
+    overflow-y: scroll;
+}
 .FavorMovie >li{
-    border: 1px solid ;
-    padding: 5px;
+    border-bottom: 1px solid lightgray;
+    padding: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
-    border-radius: 10px;
 }
 
 .pagination button

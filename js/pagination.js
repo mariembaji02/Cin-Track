@@ -1,7 +1,9 @@
 // import{initaliser} from './api.js'
+import { addFavorite, listFavor,removeFavorite } from './listFavor.js'
 import{search} from './search.js'
 import{afficherData} from './ui.js'
 // let movies=await initaliser()
+let Favorite=new Set(JSON.parse(localStorage.getItem("favorite")) || [])
 
 export function pagination(movies,Page,nbrItem)
 {
@@ -10,6 +12,9 @@ export function pagination(movies,Page,nbrItem)
       let endIndex=Page*nbrItem
       let filterTable=movies.slice(startIndex,endIndex)
       afficherData(filterTable)
+      addFavorite(filterTable)
+      listFavor(Favorite)
+      // listFavor()
       let nbrPage=Math.ceil(movies.length/nbrItem)
     
       let btnNbr=Array.from({length:nbrPage},(_,i)=>i+1)
@@ -36,6 +41,7 @@ export function pagination(movies,Page,nbrItem)
         if(!btn) return
         Page=Number(btn.dataset.page)
         pagination(movies,Page,nbrItem)
+       
       })
       let prv=document.getElementById("preview");
       if(Page==1)
@@ -58,6 +64,7 @@ export function pagination(movies,Page,nbrItem)
             Page--
             // console.log(Page)
             pagination(movies,Page,nbrItem)
+            
          }
       })
       next.addEventListener("click",function(){
@@ -66,8 +73,9 @@ export function pagination(movies,Page,nbrItem)
             Page++
             // console.log(Page)
             pagination(movies,Page,nbrItem)
+            
          }
         
       })
-
+      
 }

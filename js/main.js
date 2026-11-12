@@ -1,13 +1,18 @@
 import { sauvegarder,initaliser } from "./api.js";
-import {afficherData} from './ui.js';
 import {modal} from './modal.js';
-import {search} from './search.js'
 import {pagination} from './pagination.js'
+import {addFavorite,listFavor,removeFavorite} from './listFavor.js';
 let movies=await initaliser()
 let nbrItem=6
 let page=1
-// afficherData(movies)
+
 modal(movies);
-// console.table(movies)
+console.table(movies)
 // search(movies)
 pagination(movies,page,nbrItem)
+// getFavorite()
+
+addFavorite(movies)
+removeFavorite(movies)
+let Favorite=new Set(JSON.parse(localStorage.getItem("favorite")) || [])
+listFavor(Favorite)
