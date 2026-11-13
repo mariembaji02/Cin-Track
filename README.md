@@ -1,10 +1,10 @@
 # CinéTrack
 une plateForm pour gerer les series et les films et permet l'utilisateur fait plusieur fonction
 ### Fonctionalités 
-```html
- -Affichage des films et des séries.
- -Recherche par titre.
- -Filtrage par type de contenu (Film / Série).
+```text
+ - Affichage des films et des séries.
+ - Recherche par titre.
+ - Filtrage par type de contenu (Film / Série).
  - Affichage des détails des films et des séries.
  - Ajout et suppression des favoris.
  - Gestion des favoris avec localStorage.
@@ -13,7 +13,7 @@ une plateForm pour gerer les series et les films et permet l'utilisateur fait pl
  - Affichage dynamique des cartes
 ```
 ### Technologies utilisées
-```html
+```text
   -HTML5
   -JavaScript (ES6+)
   -Tailwind CSS
