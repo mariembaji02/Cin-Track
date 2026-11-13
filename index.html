@@ -20,31 +20,31 @@
                                  
                     </div>
                   </section>
-                  <div class=" min-h-screen ">
+                  <div class=" min-h-screen w-full">
 
-                     <nav class="flex justify-between  w-[100%] p-1">
-                        <header class=" flex  items-center gap-2 p-4 rounded-lg"> <img src="images/movie-icon.svg" alt="icon" class="w-10 h-10"> <h1 class="text-xl font-semibold"> Ciné<span class="text-pink-700">Track</span></h1></header>
+                     <nav class="flex justify-between   w-[100%] p-1">
+                        <header class=" flex  items-center gap-2 p-4 relative rounded-lg"> <img src="images/movie-icon.svg" alt="icon" class=" w-10 h-10"> <h1 class="text-xl font-semibold"> Ciné<span class="text-pink-700">Track</span></h1></header>
 
-                            <div class="genreType flex mt-3 gap-6 h-12  w-[30%] ">
-                                <button class="home cursor-pointer bg-[rgba(220,206,220,0.52)] rounded text-white border-b-5 border-white   w-[30%] text-center  text-md " data-type="all">Home</button>
-                                <button class=" cursor-pointer text-white  w-[20%] text-center  text-md "  data-type="series">Serie</button>
-                                <button class=" cursor-pointer text-white w-[20%] text-center  text-md "  data-type="movie">Film</button>
+                            <div class="genreType flex justify-center md:justify-start md:mt-3 gap-6 h-12 absolute top-[32%] w-full  md:static  md:w-[30%] ">
+                                <button class="home cursor-pointer bg-[rgba(220,206,220,0.52)] rounded text-white border-b-5 border-white   w-[30%] text-center  text-sm md:text-md " data-type="all">Home</button>
+                                <button class=" cursor-pointer text-white  w-[20%] text-center  text-sm md:text-md "  data-type="series">Serie</button>
+                                <button class=" cursor-pointer text-white w-[20%] text-center  text-sm md:text-md "  data-type="movie">Film</button>
                                 
                             </div>
-                            <div class="search w-[35%]  flex mt-1 justify-center items-center gap-2 relative">
-                            <input type="text" placeholder="  Enter le titre ..." class="Search border border-gray-400 rounded-md w-[100%] p-2  bg-white">
-                            <i class="fa-solid fa-search text-lg  text-gray-500 absolute right-6"  ></i>
+                            <div class="search absolute w-[100%] top-[43%] md:static md:w-[35%]  flex md:mt-1 justify-center items-center gap-2 ">
+                            <input type="text" placeholder="  Enter le titre ..." class="Search border border-gray-400 rounded-md w-[80%] p-2  bg-white">
+                            <i class="fa-solid fa-search text-lg  text-gray-500 absolute right-[15%] md:right-[25%] lg:right-[22%]"  ></i>
                             </div>
                            <div class=" flex  items-center gap-5 ">
                              <p  class="text-xl text-white"><i class="fa-regular fa-bell"></i></p>
-                            <p class="bg-white px-2  py-3 text-center text-md rounded-lg"><i class="fa-solid fa-user "></i><span> &nbsp;Mariem Bajbouji</span></p>
+                            <p class="bg-white flex items-center text-center gap-1 px-3  py-3  text-md md:text-sm rounded-lg"><i class="fa-solid fa-user "></i><span >Mariem Bajbouji</span></p>
                            </div>
                          </nav>
-                       <main class="content  grid grid-cols-[70%_30%] ">
+                       <main class="content  grid   lg:grid-cols-[70%_30%] mt-[20%]   sm:mt-[11%] lg:mt-1 ">
                        
                       <section>
-                         <div class="flex flex-col justify-center items-center ">
-                          <div class="CardGrid grid grid-cols-3 w-[90%] h-[40%] gap-2 px-6 py-4">
+                         <div class="flex flex-col justify-center  items-center mt-[25%] md:mt-0 ">
+                          <div class="CardGrid grid place-items-center  sm:grid-cols-2 md:grid-cols-3 w-[70%] sm:w-[90%] h-[40%] gap-2 ">
                              
                          </div>
                          <div class="pagination flex justify-around  mb-3 w-[70%]"></div>
@@ -56,11 +56,15 @@
                       </section>  
 
                       
-                             <aside class="nav  mt-4  w-[100%] ">
-                        <nav class="w-[100%] h-[90%]">
-                        <p class="text-md font-semibold p-3 mr-5  bg-white mb-1 rounded-lg "> Favorite <i class="fa-solid fa-heart text-red-500"></i></p>
+                      <aside class="nav flex justify-center  absolute top-[15%] w-[100%] md:top-[9%]   lg:static ">
+                        <nav class="w-[90%] md:w-[100%] flex flex-col   items-center md:mt-7  h-[90%]">
+                      <div class="lg:mr-5 mb-2 w-[100%] md:w-[70%] lg:h-[15%] lg:w-[90%] rounded-lg bg-[rgba(177,139,165,0.58)]  h-auto p-4 ">
+                        <p class="text-md font-semibold "> <p class=" border-b-1 mb-2 pb-1 border-gray-300 font-bold flex justify-between"> <span>Favorite <i class="fa-solid fa-heart text-red-500"></i></span> <span class=" lg:hidden "><i class="btnShow fa-solid fa-list mr-1  cursor-pointer hover:text-white"></i></span></p>
+                        <p class="flex justify-around text-sm"><span class="font-semibold">All: <span class="allCount"></span></span><span class="font-semibold">Series: <span class="SeriesCount"></span></span><span class="font-semibold">Movies: <span class="MoviesCount"></span></span></p>
+                      
+                        </div>
                         
-                        <ul class="FavorMovie bg-white   shadow-2xl  mr-5  rounded-lg h-[70%] p-3 ">
+                        <ul class="FavorMovie bg-[rgba(177,166,174,0.99)] lg:bg-[rgba(177,139,165,0.58)] w-[90%] hidden lg:block shadow-2xl  md:mr-5  rounded-lg h-[70%] p-3 ">
                         </ul>
                         </nav>
                         

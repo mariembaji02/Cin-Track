@@ -4,7 +4,7 @@ export function afficherData(movies)
     gird.innerHTML=movies.map(card=>{
         const {image,type,id}=card
         
-        return `<div class="card relative w-[90%] h-[90%]  " data-id=${id} ><img src=${image} class="rounded  relative w-full h-full cursor-pointer "  alt="big Picture">
+        return `<div class="card relative  w-[90%] h-[90%] " data-id=${id} ><img src=${image} class="rounded  relative w-full h-full cursor-pointer "  alt="big Picture">
          <button data-model=${id} class="addFavor cursor-pointer hover:text-red-500 text-gray-300 absolute top-7 right-6 text-xl"><i class="heart fa-regular fa-heart " data-btn=${id}></i></button>
                              <div class="absolute bottom-20 left-4 text-white w-[80%] p-2 ">                               
                              </div>

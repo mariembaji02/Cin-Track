@@ -15,12 +15,12 @@ export function pagination(movies,Page,nbrItem)
     
       let btnNbr=Array.from({length:nbrPage},(_,i)=>i+1)
       paginElement.innerHTML=
-      `<button data- class="rounded  w-10 h-10 bg-[rgba(230,225,225,0.78)]"  id="preview">&lt;</button>
+      `<button data- class="rounded  w-8 h-8  md:w-10 md:h-10 bg-[rgba(230,225,225,0.78)]"  id="preview">&lt;</button>
       ${paginElement.innerHTML=btnNbr.map((btn,index)=>{
-      return `<button   data-page=${index+1} class="num rounded  w-10 h-10 bg-[rgba(230,225,225,0.78)]">${btn}</button>`
+      return `<button   data-page=${index+1} class="num rounded w-8 h-8  md:w-10 md:h-10 bg-[rgba(230,225,225,0.78)]">${btn}</button>`
       }).join("")}
         
-        <button class="rounded  w-10 h-10 bg-[rgba(230,225,225,0.78)]" id="after">&gt;</button>`
+        <button class="rounded w-8 h-8   md:w-10 md:h-10 bg-[rgba(230,225,225,0.78)]" id="after">&gt;</button>`
         let number=document.querySelectorAll(".num")
         number.forEach(num=>{
           if(num.textContent.trim()==Page)

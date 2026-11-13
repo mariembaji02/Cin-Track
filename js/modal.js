@@ -14,6 +14,7 @@ export function modal(movies)
              })
              if(result)
              {
+               infos.innerHTML=""
                //  console.log(result)
                 modal.classList.remove("hidden")
                //  infos.style.backgroundImage=`url(${result.image})`

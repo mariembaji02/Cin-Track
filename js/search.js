@@ -46,8 +46,11 @@ export function search(movies)
             type.addEventListener("click",(e)=>{
               let btn =e.target.closest("[data-type]");
                if(!btn) return
-              typeStatut=btn.dataset.type;
-
+               typeStatut=btn.dataset.type;
+               type.querySelectorAll("button").forEach(btn=>
+                btn.classList.remove("border-white","bg-[rgba(220,206,220,0.52)]","border-b-5")
+               )
+               btn.classList.add("border-white","bg-[rgba(220,206,220,0.52)]","border-b-5","rounded")
               search(movies)
 
               })

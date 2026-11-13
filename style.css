@@ -4,7 +4,7 @@ body
 }
 .FavorMovie
 {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 .FavorMovie >li{
     border-bottom: 1px solid lightgray;
