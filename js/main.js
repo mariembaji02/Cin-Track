@@ -47,7 +47,7 @@ btn.addEventListener("click",()=>{
         btn.classList.remove("btnHide")
         btn.classList.add("btnShow")
         btn.classList.replace("fa-x","fa-list")
-       listFavorite.classList.add("hidden")
+        listFavorite.classList.add("hidden")
 
     }
 })
